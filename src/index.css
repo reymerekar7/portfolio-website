@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-gray-900 bg-gray-50;
+  }
+}
+
+@layer components {
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .nav-link {
+    @apply flex items-center px-4 transition-colors duration-200;
+  }
+
+  .nav-link-active {
+    @apply text-purple-400 bg-black/30;
+  }
+
+  .nav-link-inactive {
+    @apply text-white hover:text-white hover:bg-purple-500/20;
+  }
+}
+
+@layer utilities {
+  .profile-photo-ring {
+    @apply ring-2 ring-black/5;
+  }
+}
