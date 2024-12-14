@@ -8,7 +8,7 @@ const Bio = () => {
         {/* Left Column - Bio Content */}
         <div className="flex-1 flex items-center justify-center p-8">
           <div className="max-w-xl">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">John Doe</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Reyhan Merekar</h1>
             <p className="text-gray-600 leading-relaxed text-lg">
               I am a passionate software engineer with extensive experience in full-stack development.
               My expertise spans across modern web technologies, cloud infrastructure, and scalable
