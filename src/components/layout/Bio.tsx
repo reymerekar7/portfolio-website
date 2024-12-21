@@ -8,12 +8,9 @@ const Bio = () => {
         {/* Left Column - Bio Content */}
         <div className="flex-1 flex items-center justify-center p-8">
           <div className="max-w-xl">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Reyhan Merekar</h1>
-            <p className="text-gray-600 leading-relaxed text-lg">
-              I am a passionate machine learning engineer with extensive experience in full-stack development.
-              My expertise spans across modern web technologies, cloud infrastructure, and scalable
-              architecture. I thrive on solving complex technical challenges and am dedicated to
-              creating elegant, efficient solutions that make a real impact.
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Reyhan Merekar</h1>
+            <p className="text-gray-600 leading-relaxed text-xl">
+              AI Engineer, Founder, Educator, Lifelong Learner.
             </p>
           </div>
         </div>

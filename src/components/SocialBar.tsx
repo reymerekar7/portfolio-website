@@ -3,10 +3,10 @@ import { Github, Linkedin, Twitter, Mail, Send } from 'lucide-react';
 
 const SocialBar = () => {
   const socials = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:hello@example.com', label: 'Email' },
+    { icon: Github, href: 'https://github.com/reymerekar7', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/reyhanmerekar/', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://x.com/reymerekar7', label: 'Twitter' },
+    { icon: Mail, href: 'mailto:reyhan.merekar@gmail.com', label: 'Email' },
     { icon: Send, href: 'https://t.me', label: 'Telegram' },
   ];
 

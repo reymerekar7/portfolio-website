@@ -18,34 +18,44 @@ const About = () => {
       'Tailwind CSS',
       'Material UI',
     ],
-    backend: [
-      'Node.js',
-      'Express.js',
-      'NestJS',
+    ai: [
+      'OpenAI',
+      'Anthropic',
+      'Hugging Face',
+      'LangChain',
       'Python',
-      'Django',
       'FastAPI',
       'RESTful APIs',
-      'GraphQL',
+      'TensorFlow',
+      'PyTorch',
+      'Scikit-Learn',
+      'Pandas',
+      'NumPy',
+      'MLFlow',
     ],
     database: [
-      'PostgreSQL',
-      'MongoDB',
-      'Redis',
+      'Google Cloud Platform',
       'AWS',
       'Docker',
       'Kubernetes',
       'CI/CD',
       'Git',
+      'Apache Airflow',
+      'dbt',
+      'MLOps',
     ],
   };
 
   const skillBars = [
-    { name: 'Frontend Development', percentage: 95 },
-    { name: 'Backend Development', percentage: 90 },
-    { name: 'Database Management', percentage: 85 },
-    { name: 'Cloud Infrastructure', percentage: 80 },
-    { name: 'DevOps', percentage: 75 },
+    { name: 'AI/ML Development', percentage: 95 },
+    { name: 'Entrepreneurship/Startups', percentage: 90 },
+    { name: 'Generative AI', percentage: 90 },
+    { name: 'MLOps/LLMOps', percentage: 85 },
+    { name: 'Storytelling', percentage: 85 },
+    { name: 'Content Creation', percentage: 85 },
+    { name: 'Client Relationship Management', percentage: 80 },
+    { name: 'Strategic Advisory', percentage: 80 },
+    { name: 'Data Engineering', percentage: 75 },
   ];
 
   return (
@@ -53,48 +63,70 @@ const About = () => {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <Breadcrumbs items={breadcrumbs} />
         
+        {/* About Me Section */}
         <div className="mb-12">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">About Me</h1>
           <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            I am a passionate software engineer with extensive experience in full-stack development.
-            My technical expertise includes building scalable applications and implementing best practices
-            in software development. I thrive on solving complex technical challenges and am always eager
-            to learn new technologies.
+            As an AI Architecture Specialist at Accenture, I lead clients through AI/ML transformations, operationalizing scalable solutions that deliver tangible value. 
+            My expertise encompasses Generative AI, MLOps, AI/ML Development, and Strategic Advisory.
+            I am passionate about creating innovative AI-driven products and excel at combining technical proficiency with storytelling to craft compelling narratives that highlight competitive advantages. 
+            With a strong entrepreneurial mindset, I am dedicated to exploring effective methodologies, systems, and startup ventures.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Core Competencies</h2>
-            <div className="space-y-6">
-              {skillBars.map((skill) => (
-                <SkillBar
-                  key={skill.name}
-                  name={skill.name}
-                  percentage={skill.percentage}
-                />
-              ))}
-            </div>
+        {/* Core Competencies Section */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Core Competencies</h2>
+          <div className="space-y-6">
+            {skillBars.map((skill) => (
+              <SkillBar
+                key={skill.name}
+                name={skill.name}
+                percentage={skill.percentage}
+              />
+            ))}
           </div>
+        </div>
 
-          <div className="bg-gray-50 p-6 rounded-xl">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Technical Expertise</h2>
-            <div className="space-y-8">
-              <SkillCategory title="Frontend Development" skills={skillCategories.frontend} />
-              <SkillCategory title="Backend Development" skills={skillCategories.backend} />
-              <SkillCategory title="Database & Cloud" skills={skillCategories.database} />
+        {/* Technical Expertise Section */}
+        <div className="mb-12">
+          {/* Technical Expertise Header */}
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Technical Expertise</h2>
+          
+          {/* Container without horizontal padding to align headers */}
+          <div className="bg-gray-50 rounded-xl">
+            {/* Inner container with vertical padding and no horizontal padding */}
+            <div className="py-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+              
+              {/* AI/ML Development Column */}
+              <div className="space-y-4">
+                <h3 className="font-bold ml-0">AI/ML Development</h3>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategories.ai.map(skill => (
+                    <span key={skill} className="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Database & Cloud Column */}
+              <div className="space-y-4">
+                <h3 className="font-bold ml-0">Database, Cloud & DevOps</h3>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategories.database.map(skill => (
+                    <span key={skill} className="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
 
-        <div className="prose prose-indigo max-w-none">
-          <p className="text-gray-600">
-            I thrive on solving complex technical challenges and building scalable applications.
-            My focus is on writing clean, maintainable code and implementing best practices in
-            software development. I'm always eager to learn new technologies and contribute to
-            innovative projects.
-          </p>
-        </div>
+        {/* Removed Additional Description Section */}
       </div>
     </PageTransition>
   );
