@@ -19,6 +19,8 @@ const Header = ({ items }: HeaderProps) => {
               <Link
                 key={title}
                 to={href}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className={`flex items-center px-4 transition-colors duration-200
                   ${isActive 
                     ? 'text-purple-400 bg-black/30' 

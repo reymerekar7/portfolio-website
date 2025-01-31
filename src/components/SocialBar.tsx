@@ -16,6 +16,8 @@ const SocialBar = () => {
         <a
           key={label}
           href={href}
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label={label}
           className="text-gray-600 hover:text-indigo-600 transition-all duration-300 hover:scale-110"
         >
