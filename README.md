@@ -34,6 +34,7 @@ To create a production build:
 ```bash
 npm run build
 ```
+Production website: https://reyhan-merekar-portfolio.netlify.app/
 
 ## Deployment
 
